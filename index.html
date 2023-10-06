@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @font-face {
+  font-family: "kausan";
+  src: url(KaushanScript-Regular.otf) 
+  format(truetype);
+}
+    body {
+      background-color: #413e3e;
+    }
+    
+    #catatan #nav {
+      width: 100%;
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 8px;
+      margin-left: 7px;
+    }
+    
+    #catatan #nav img {
+      padding: 8px;
+      padding-right: 8px;
+    }
+    
+    #catatan #nav h1 {
+      font-size: 20px;
+      font-family: kausan;
+      padding-left: 8px;
+    }
+    
+    #catatan form textarea {
+      background-color: white;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      height: 400px;
+      font-size: 20px;
+      font-family: arial;
+      padding: 10px;
+      margin-top: 15px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="catatan">
+   <div id="nav">
+     <h1>NotePad</h1>
+     <img src="tombol.png" alt="tombol">
+   </div>
+   <br>
+    <form>
+      <center>
+      <textarea name="textarea" cols="1" rows="1" maxlength="680" placeholder="tulis disini"></textarea>
+    </center>
+</form>
+  </div>
+  
+  <script src="Catatan.js"></script>
+</body>
+</html>
