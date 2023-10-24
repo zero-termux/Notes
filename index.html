@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>NotePad</title>
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Document</title>
   <style>
     @font-face {
   font-family: "kausan";
@@ -34,9 +32,36 @@
     
     #catatan #warna img {
       position: absolute;
-      display: flex;
       left: 72%;
       top: 12px;
+    }
+    
+    .save {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .save button {
+      margin: 5px;
+      margin-top: 10px;
+      width: 95px;
+      height: 35px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: none;
+      transition: .5s;
+    }
+    
+    .save button:hover {
+      background-color: black;
+      color: white;
+      border-radius: 3px;
+    }
+    
+    @media screen and (min-width: 600px) {
+      #catatan #warna img {
+        left: 90%;
+      }
     }
     
     #catatan #nav h1 {
@@ -57,12 +82,6 @@
       margin-top: 15px;
       margin-right: 8px;
     }
-
-    @media screen and (min-width: 600px) {
-      #catatan #warna img {
-        left: 92%;
-      }
-    }
   </style>
 </head>
 <body>
@@ -77,9 +96,13 @@
    <br>
     <form>
         <center>
-      <textarea name="textarea" cols="1" rows="1" maxlength="400" placeholder="tulis disini"></textarea>
+      <textarea name="textarea" cols="1" rows="1" maxlength="400" placeholder="tulis disini" id="note"></textarea>
     </center>
 </form>
+<div class="save">
+  <button onclick="saveNote()">Simpan</button>
+  <button onclick="downloadNote()">Download</button>
+  </div>
   </div>
   
   <script src="Catatan.js"></script>
