@@ -17,3 +17,24 @@ gWarna.addEventListener('click', function(){
   const b = Math.round(Math.random() * 255 + 1);
   document.body.style.backgroundColor = 'rgb('+ r +','+ g +','+ b +')';
 })
+
+function saveNote() {
+  const noteContent = document.getElementById("note").value;
+  localStorage.setItem("note", noteContent);
+  alert("Catatan berhasil disimpan!");
+}
+
+function downloadNote() {
+  let noteContent = localStorage.getItem("note");
+  if (noteContent) {
+    let blob = new Blob([noteContent], { type: "text/plain" });
+    let url = URL.createObjectURL(blob);
+    let a = document.createElement("a");
+    a.href = url;
+    a.download = "catatan anda.txt";
+    a.click();
+    alert("Catatan berhasil diunduh!");
+  } else {
+    alert("Tidak ada catatan yang tersedia!");
+  }
+}
